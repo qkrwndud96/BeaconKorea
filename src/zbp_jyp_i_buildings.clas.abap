@@ -1,0 +1,5 @@
+CLASS zbp_jyp_i_buildings DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zjyp_i_buildings.
+ENDCLASS.
+
+CLASS zbp_jyp_i_buildings IMPLEMENTATION.
+ENDCLASS.

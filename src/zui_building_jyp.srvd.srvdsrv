@@ -1,0 +1,4 @@
+@EndUserText.label: 'Building Service'
+define service ZUI_BUILDING_JYP {
+  expose ZJYP_C_BUILDINGS as Buildings;
+}

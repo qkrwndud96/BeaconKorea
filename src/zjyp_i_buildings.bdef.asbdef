@@ -1,0 +1,33 @@
+managed implementation in class zbp_jyp_i_buildings unique;
+strict;
+
+define behavior for ZJYP_I_BUILDINGS alias Building
+persistent table zjyp_buildings
+lock master
+authorization master ( instance )
+//etag master <field_name>
+late numbering
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly ) BuildingId, CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
+
+  validation validateNRooms on save { create; field NRooms; }
+
+  mapping for zjyp_buildings
+    {
+      BuildingId    = building_id;
+      BuildingName  = building_name;
+      NRooms        = n_rooms;
+      AddressLine   = address_line;
+      City          = city;
+      State         = state;
+      Country       = country;
+      CreatedAt     = created_at;
+      CreatedBy     = created_by;
+      LastChangedAt = last_changed_at;
+      LastChangedBy = last_changed_by;
+    }
+}
